@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pub Nothing - Projet vidéo étudiant par ArrowBAZ">
+    <title>Pub Nothing - ArrowBAZ</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Styles spécifiques à la page projet */
+        .project-hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .project-hero-title {
+            font-family: var(--font-display);
+            font-size: var(--text-4xl);
+            margin-bottom: var(--spacing-md);
+            letter-spacing: 2px;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-xl);
+            color: var(--color-text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+        }
+
+        .meta-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-value {
+            font-size: var(--text-base);
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto var(--spacing-3xl);
+            aspect-ratio: 16 / 9;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background-color: var(--color-surface);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-description {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-3xl);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .gallery-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: var(--spacing-3xl) auto;
+            padding-top: var(--spacing-3xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-project {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+            transition: transform var(--transition-base);
+        }
+
+        .nav-project:hover {
+            transform: translateX(5px);
+        }
+
+        .nav-project.prev:hover {
+            transform: translateX(-5px);
+        }
+
+        .nav-label {
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-text-secondary);
+        }
+
+        .nav-title {
+            font-family: var(--font-display);
+            font-size: var(--text-xl);
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .project-meta {
+                gap: var(--spacing-md);
+            }
+
+            .project-nav {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../index.html" class="logo">ARROWBAZ</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#hero" class="nav-link">Accueil</a></li>
+                    <li><a href="../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="container">
+            <h1 class="project-hero-title">PUB NOTHING</h1>
+            
+            <div class="project-meta">
+                <div class="project-meta-item">
+                    <span class="meta-label">Type</span>
+                    <span class="meta-value">Projet étudiant</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="meta-label">Catégorie</span>
+                    <span class="meta-value">Vidéo</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="meta-label">Année</span>
+                    <span class="meta-value">2025</span>
+                </div>
+                <div class="project-meta-item">
+                    <span class="meta-label">Durée</span>
+                    <span class="meta-value">1:30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO PRINCIPALE -->
+    <section class="section">
+        <div class="container">
+            <!-- Remplacez l'URL par votre vidéo YouTube -->
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/VOTRE_VIDEO_ID" 
+                    title="Pub Nothing"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="project-description">
+                <p>
+                    Ce projet représente une publicité créative pour la marque Nothing. 
+                    L'objectif était de capturer l'essence minimaliste et innovante de la marque 
+                    tout en créant une narration visuelle engageante.
+                </p>
+                <p>
+                    À travers un montage dynamique et une direction artistique épurée, 
+                    j'ai cherché à mettre en valeur les produits Nothing dans leur environnement, 
+                    en jouant sur les contrastes et la lumière.
+                </p>
+            </div>
+
+            <!-- GALERIE D'IMAGES (optionnel) -->
+            <div class="project-gallery">
+                <div class="gallery-image">
+                    <img src="../images/projects/pub-nothing-1.jpg" alt="Pub Nothing - Image 1" loading="lazy">
+                </div>
+                <div class="gallery-image">
+                    <img src="../images/projects/pub-nothing-2.jpg" alt="Pub Nothing - Image 2" loading="lazy">
+                </div>
+                <div class="gallery-image">
+                    <img src="../images/projects/pub-nothing-3.jpg" alt="Pub Nothing - Image 3" loading="lazy">
+                </div>
+            </div>
+
+            <!-- INFORMATIONS TECHNIQUES -->
+            <div class="project-description">
+                <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-bottom: var(--spacing-md);">
+                    INFORMATIONS TECHNIQUES
+                </h3>
+                <ul style="list-style: none; display: grid; gap: var(--spacing-sm);">
+                    <li><strong>Logiciels :</strong> Adobe Premiere Pro, After Effects, DaVinci Resolve</li>
+                    <li><strong>Matériel :</strong> Sony A7III, DJI Ronin SC</li>
+                    <li><strong>Équipe :</strong> Solo (réalisation, montage, étalonnage)</li>
+                    <li><strong>Durée du projet :</strong> 2 semaines</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION VERS AUTRES PROJETS -->
+    <section class="section">
+        <div class="container">
+            <div class="project-nav">
+                <a href="beige-bloop.html" class="nav-project prev">
+                    <span class="nav-label">← Projet précédent</span>
+                    <span class="nav-title">Beige - BLOOP</span>
+                </a>
+                <a href="best-of-gfx.html" class="nav-project next">
+                    <span class="nav-label">Projet suivant →</span>
+                    <span class="nav-title">Best Of GFX</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <nav>
+                <ul class="footer-nav">
+                    <li><a href="../index.html" class="footer-link">Accueil</a></li>
+                    <li><a href="../projets.html" class="footer-link">Projets</a></li>
+                </ul>
+            </nav>
+            <p class="footer-copyright">
+                © 2026 ArrowBAZ - Basile Pistono. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scroll-top" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

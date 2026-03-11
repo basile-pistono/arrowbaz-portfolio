@@ -1,0 +1,271 @@
+/* --- EN-TÊTE DU PROJET (TITRE CHEVAUCHÉ) --- */
+.project-hero {
+    padding-top: 150px;
+    margin-bottom: var(--spacing-2xl);
+    position: relative;
+}
+
+.title-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--spacing-xl);
+}
+
+.title-bg-calligraphy {
+    font-family: var(--font-signature);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(4rem, 10vw, 8rem);
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: 1;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.project-main-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    line-height: 0.9;
+}
+
+/* --- GRILLE D'INFOS (3 COLONNES) --- */
+.project-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    border-top: 1px solid var(--color-accent-low);
+    padding-top: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.meta-col h4 {
+    font-size: var(--text-xl);
+    text-transform: ;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-xs);
+}
+
+.meta-col p {
+    font-weight: 300;
+    font-size: var(--text-base);
+    color: var(--color-accent-low);
+}
+
+/* --- CONTENU ADAPTABLE --- */
+.content-wrapper {
+    width: 100%;
+    margin-bottom: var(--spacing-3xl);
+}
+
+/* Format Horizontal & Galerie (Rectangle 16:9) */
+.tpl-horizontal, .tpl-gallery {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: #0a0a0a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Format Vertical */
+.tpl-vertical {
+    max-width: 600px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Galerie Intégrée */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 100%;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-wrapper iframe, .content-wrapper img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .project-meta-grid { grid-template-columns: 1fr; gap: var(--spacing-md); }
+    .title-bg-calligraphy { top: -30px; }
+}
+
+
+
+
+
+
+
+
+
+
+.project-hero-simple {
+    padding: 180px var(--spacing-xs) 60px; /* Ajuste le haut pour le header fixe */
+    max-width: 1200px;
+    margin: 0 0;
+}
+
+.hero-title-container {
+    position: relative;
+    display: inline-block; /* Pour que le conteneur épouse la largeur du texte */
+    margin-bottom: var(--spacing-sm);
+}
+
+.main-title-lowercase {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(3rem, 10vw, 8rem); /* Taille massive mais réactive */
+    color: var(--color-accent);
+    text-transform: ; /* Force les minuscules */
+    line-height: 0.85;
+    margin: 0;
+}
+
+.overlap-signature {
+    font-family: var(--font-signature);
+    color: var(--color-text); /* Blanc pour trancher sur le rouge */
+    font-size: clamp(6rem, 15vw, 12rem);
+    position: absolute;
+    right: -20px; /* Décalage vers la droite */
+    bottom: -90px;  /* Ajuste la hauteur de superposition */
+    z-index: 10;
+    pointer-events: none; /* Pour ne pas gêner la sélection du titre */
+}
+
+.category-list {
+    font-family: var(--font-display);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: var(--spacing-md);
+}
+
+
+
+.category-titre{
+    font-size: var(--text-sm);
+    color: var(--color-accent);
+    letter-spacing: -0.03em;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+.project-presentation {
+    max-width: 1200px;
+    margin: var(--spacing-2xl) auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.presentation-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Titre plus court que le texte */
+    gap: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+}
+
+.presentation-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: var(--text-2xl);
+    color: var(--color-accent);
+    text-transform: ; /* Toujours en minuscules */
+    margin: 0;
+}
+
+.presentation-content {
+    font-family: var(--font-display);
+    color: var(--color-text);
+    line-height: 1.6;
+    font-size: var(--text-base);
+    opacity: 0.9;
+}
+
+.presentation-content p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* --- Responsive pour mobile --- */
+@media (max-width: 768px) {
+    .presentation-grid {
+        grid-template-columns: 1fr; /* On repasse sur une seule colonne */
+        gap: var(--spacing-md);
+    }
+    
+    .presentation-title {
+        font-size: var(--text-xl);
+    }
+}
+
+
+
+
+
+
+
+
+/* Conteneur pour centrer le bouton en bas de page */
+.back-to-projects {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-2xl) 0;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Application de ton style spécifique */
+.back-btn-custom {
+    display: block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--color-accent);
+    font-family: var(--font-display); /* Epilogue */
+    font-weight: 400;
+    text-transform: lowercase;
+    border-radius: 999px; /* Equivalent var(--radius-full) */
+    text-align: center;
+    width: 250px; /* Un peu plus large pour le texte long */
+    transition: all 0.2s ease;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+
+    /* LE RELIEF : ton style exact */
+    border-style: solid;
+    border-color: var(--color-accent);
+    border-width: 2px 5px 5px 2px; /* Top Right Bottom Left */
+}
+
+.back-btn-custom:hover {
+    /* Effet d'écrasement exact de ta demande */
+    border-width: 2px; 
+    transform: translate(3px, 3px); /* On pousse un peu plus pour compenser l'épaisseur */
+    background-color: rgba(235, 35, 35, 0.05);
+    color: var(--color-accent);
+}
