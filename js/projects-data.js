@@ -11,7 +11,7 @@ const projectsData = [
         type: 'Vidéo • Projet étudiant',
         thumbnail: 'images/projects/entre-feu-foi.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/file/d/1pQh4ekzfpmYh5zyLheENBpIdLSdD3DvJ/view?usp=sharing' // Le nom du fichier HTML que tu vas créer
 
     },
     {
@@ -43,7 +43,7 @@ const projectsData = [
         type: 'Motion Design • Projet étudiant',
         thumbnail: 'images/projects/hologramme-motion.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/file/d/15sXWZdXbVWH1yjJ-y0JrDnH4mkFJUxJu/view?usp=sharing' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'mixtigri',
@@ -53,7 +53,7 @@ const projectsData = [
         type: 'Graphic Design • Projet étudiant',
         thumbnail: 'images/projects/mixtigri.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/drive/folders/1se2nUagULlHDGY8NVexcUifCGM18_L5O?usp=drive_link' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'beige-bloop',
@@ -115,7 +115,7 @@ const projectsData = [
         type: 'Photo • Projet étudiant',
         thumbnail: 'images/projects/decathlon-pate.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/file/d/1bEHKupnnQf4ErrGPctW27-yq-ABPODg9/view?usp=sharing' // Le nom du fichier HTML que tu vas créer
 
     },
     {
@@ -126,7 +126,7 @@ const projectsData = [
         type: 'Motion Design • Graphic Design • Client • Projet étudiant',
         thumbnail: 'images/projects/scarabee-jingle.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/drive/folders/1HjG74enQ94WPFujpXcJF-ogIzbUJMgKv?usp=sharing' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'camby-video',
@@ -137,7 +137,7 @@ const projectsData = [
         thumbnail: 'images/projects/camby-video.jpg',
         featured: true,
         featuredOrder: 5,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/p/DQj2WJ4DXp_/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'camby-graphisme',
@@ -148,7 +148,7 @@ const projectsData = [
         thumbnail: 'images/projects/camby-graphisme.jpg',
         featured: true,
         featuredOrder: 6,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/p/DOOsSpEgsp1/?img_index=1' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'best-of-gfx',
@@ -159,7 +159,7 @@ const projectsData = [
         thumbnail: 'images/projects/best-of-gfx.jpg',
         featured: true,
         featuredOrder: 3,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/arrowbaz_music/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'hyperlapse-italie',
@@ -169,18 +169,18 @@ const projectsData = [
         type: 'Vidéo',
         thumbnail: 'images/projects/hyperlapse-italie.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/p/DNq2Jb6N8aw/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'portfolio-insta',
-        title: 'Portfolio Insta',
+        title: 'Motion Design ShowReel',
         categories: ['video', 'motion-design'],
         tags: [],
         type: 'Vidéo • Motion Design',
         thumbnail: 'images/projects/portfolio-insta.jpg',
         featured: true,
         featuredOrder: 8,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/p/DKhrcFlNOe6/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'photos-persos',
@@ -190,7 +190,7 @@ const projectsData = [
         type: 'Photo',
         thumbnail: 'images/projects/photos-persos.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/baz_png/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'photo-frammi',
@@ -200,7 +200,7 @@ const projectsData = [
         type: 'Photo • Client',
         thumbnail: 'images/projects/photo-frammi.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/p/DIy9KzXAeiM/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'la-rif-nos-men',
@@ -211,7 +211,7 @@ const projectsData = [
         thumbnail: 'images/projects/la-rif-nos-men.jpg',
         featured: true,
         featuredOrder: 4,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://www.instagram.com/la_rif_et_nos_men/' // Le nom du fichier HTML que tu vas créer
     },
     {
         id: 'arrowbaz-music',
@@ -221,7 +221,7 @@ const projectsData = [
         type: 'Musique/son',
         thumbnail: 'images/projects/arrowbaz-music.jpg',
         featured: false,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer METTRE LE LINKTREE
+        url: 'https://linktr.ee/arrowbaz' // Le nom du fichier HTML que tu vas créer METTRE LE LINKTREE
     },
     {
         id: 'besoin-album-cover',
@@ -232,6 +232,6 @@ const projectsData = [
         thumbnail: 'images/projects/besoin-album-cover.jpg',
         featured: true,
         featuredOrder: 7,
-        url: 'projet-printemps.html' // Le nom du fichier HTML que tu vas créer
+        url: 'https://drive.google.com/file/d/1z2ZBpALAggq9pfS-FL8RBp6njaIAnxqj/view?usp=sharing' // Le nom du fichier HTML que tu vas créer
     }
 ];
