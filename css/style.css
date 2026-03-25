@@ -301,6 +301,8 @@ button {
 .about-image img {
     width: 250px;
     height: 250px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--color-accent);
@@ -627,7 +629,7 @@ button {
     .about-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: left;
         border-radius: 80px;
         padding: var(--spacing-xl);
     }
@@ -640,6 +642,8 @@ button {
 }
 
 @media (max-width: 768px) {
+
+
     .nav-menu {
         gap: var(--spacing-md);
     }
@@ -661,6 +665,42 @@ button {
         flex-direction: column;
         align-items: center;
     }
+
+
+    .footer-social {
+        /* On passe d'une grille de 2 colonnes à 1 seule colonne */
+        grid-template-columns: 1fr; 
+        
+        /* On centre la grille elle-même dans le footer */
+        justify-content: center; 
+        
+        /* On centre chaque bouton à l'intérieur de sa ligne */
+        justify-items: center; 
+        
+        gap: 15px; /* Espace entre les boutons verticalement */
+        width: 100%;
+    }
+
+    .social-btn {
+        /* Optionnel : on peut élargir un peu les boutons pour qu'ils soient 
+           plus faciles à cliquer au doigt sur mobile */
+        width: 100%;
+        max-width: 250px; 
+        margin: 0 auto; /* Sécurité pour le centrage */
+    }
+
+
+
+.section-title {
+        margin-left: 0;       /* On supprime la marge de 3xl ou de 5% */
+        text-align: center;   /* On centre le texte horizontalement */
+        width: 100%;          /* On s'assure que le titre prend toute la largeur */
+        padding: 0;           /* On retire d'éventuels paddings qui décaleraient le centre */
+    }
+
+
+
+
     
     #scroll-top {
         bottom: var(--spacing-lg);
@@ -673,7 +713,66 @@ button {
     font-size: var(--text-2xl);
 }
 
+
+
+
+
+.footer-content {
+        flex-direction: column; /* Empile les blocs verticalement */
+        align-items: center;    /* Centre les blocs horizontalement */
+        text-align: center;     /* Centre le texte à l'intérieur */
+        gap: var(--spacing-xl); /* Espace entre le logo, la nav et les boutons */
+    }
+
+.footer-logo {
+        display: flex;         /* Permet d'aligner l'image à l'intérieur */
+        justify-content: center; 
+        width: 100%;           /* Prend toute la largeur pour bien se centrer */
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .footer-logo img {
+        margin: 0 auto;        /* La méthode infaillible pour centrer une image */
+        display: block;
+        /* Si ton logo a un padding naturel dans l'image, tu peux l'ajuster ici */
+    }
+
+    /* 3. On centre la liste de navigation (Accueil / Projets) */
+    .footer-links {
+        justify-content: center; /* Centre le bloc de liens */
+        width: 100%;
+    }
+
+    .footer-nav {
+        align-items: center;     /* Centre les puces de la liste */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* 4. On s'assure que les boutons sociaux sont bien en colonne et centrés */
+    .footer-social {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        justify-items: center;      /* Centre les boutons dans la grille */
+        width: 100%;
+        gap: 12px;
+    }
+
+    .social-btn {
+        width: 100%;
+        max-width: 280px; /* Taille confortable pour le pouce */
+    }
+
+
+
+
+
+
+
 }
+
+
+
 
 @media (max-width: 480px) {
     .header {
@@ -692,6 +791,50 @@ button {
         .section-title {
     font-size: var(--text-xl);
 }
+
+
+.about-image img {
+        /* On réduit la taille tout en gardant le ratio 1:1 */
+        width: 180px;  /* <--- On passe de 250px à 180px */
+        height: 180px; /* <--- On garde height = width */
+    }
+
+
+
+.hero-title {
+    font-size: clamp(2rem, 15vw, 14rem);
+}
+
+.hero-signature {
+    font-size: clamp(2rem, 15vw, 12rem);
+}
+
+.hero-subtitle {
+    margin-inline: 10%;
+    font-size: var(--text-xs);
+}
+
+
+.about-text p {
+    font-size: var(--text-xs);
+    line-height: 1.4;
+    letter-spacing: -0.06em;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+}
+
+
+
+@media (max-width: 350px) {
+
+    .about-image img {
+        /* On réduit la taille tout en gardant le ratio 1:1 */
+        width: 140px;  /* <--- On passe de 250px à 180px */
+        height: 140px; /* <--- On garde height = width */
+    }
+
 }
 
 
