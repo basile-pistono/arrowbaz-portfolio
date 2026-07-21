@@ -11,6 +11,7 @@
     --color-accent-hover: #FF3333;
     --color-card-bg: #B8B8B8;
     --color-accent-low: rgba(158, 23, 23, 1);
+    --color-bonus: #F4AFAB;
     
     /* Typographie */
     --font-display: 'Epilogue', sans-serif;
@@ -274,6 +275,13 @@ button {
     padding: var(--spacing-3xl) 0;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    width: 50%;
+}
 .section-title {
     font-family: var(--font-display);
     font-weight: 900;
@@ -281,8 +289,32 @@ button {
     color: var(--color-accent);
     letter-spacing: -0.06em;
     text-transform: none;
-    margin-bottom: var(--spacing-m);
+    margin-bottom: 0;
     margin-left: var(--spacing-3xl);
+}
+
+.cv-btn {
+    display: inline-block;
+    padding: 0.7rem var(--spacing-xl);
+    background-color: transparent;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: var(--text-base);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+    letter-spacing: -0.06em;
+    flex-shrink: 0;  /* Empêche le bouton de rétrécir */
+    
+    border-style: solid;
+    border-color: var(--color-accent);
+    border-width: 2px 5px 5px 2px;
+}
+
+.cv-btn:hover {
+    border-width: 2px;
+    transform: translate(2px, 2px);
+    background-color: var(--color-accent);
+    color: var(--color-bg);
 }
 
 .about-content {
@@ -290,8 +322,26 @@ button {
     gap: var(--spacing-xl);
     align-items: flex-start;
     border: 2px solid var(--color-accent);
-    border-radius: 200px;
+    border-radius: 800px;
     padding: var(--spacing-lg) var(--spacing-lg);
+    box-sizing: border-box;
+    position: relative;  
+    overflow: hidden;         
+}
+
+/* ← AJOUTE CE PSEUDO-ÉLÉMENT */
+.about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/flower_banner3.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;  /* Reste derrière le contenu */
+    filter: brightness(0.15) ;  /* ← Assombrit JUSTE l'image */
 }
 
 .about-image {
@@ -325,6 +375,7 @@ button {
     color: var(--color-accent);
     font-weight: 900;
 }
+
 
 /* ========================================
    FILTERS
